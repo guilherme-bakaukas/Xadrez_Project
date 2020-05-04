@@ -1,5 +1,4 @@
 public class Cavalo extends Peca {
-    char nome;//indica o nome apresentado no tabuleiro
 
     Cavalo(char equipe){
         super(equipe);

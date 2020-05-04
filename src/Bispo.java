@@ -1,5 +1,4 @@
 public class Bispo extends Peca {
-    char nome;//indica o nome apresentado no tabuleiro
 
     Bispo(char equipe){
         super(equipe);
