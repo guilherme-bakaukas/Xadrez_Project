@@ -17,20 +17,20 @@ public class Torre extends Peca {
 
         if (linha_final==linha_inicial){
             int incremento=0;
-            if (coluna_final>=coluna_inicial) incremento=1;
+            if (coluna_final>coluna_inicial) incremento=1;
             if (coluna_final<coluna_inicial) incremento=-1;
-            int coluna=coluna_inicial;
-            while(coluna<=coluna_final){
+            int coluna=coluna_inicial+ incremento;
+            while(coluna<coluna_final){
                 if (matriz[linha_final][coluna]!=null) return false;
                 else coluna+=incremento;
             }
         }
         if (coluna_final==coluna_inicial){
             int incremento=0;
-            if (linha_final>=linha_inicial) incremento=1;
+            if (linha_final>linha_inicial) incremento=1;
             if (linha_final<linha_inicial) incremento=-1;
-            int linha=linha_inicial;
-            while (linha<=linha_final){
+            int linha=linha_inicial+incremento;
+            while (linha<linha_final){
                 if (matriz[linha][coluna_final]!=null) return false;
                 else linha+=incremento;
             }
@@ -38,4 +38,5 @@ public class Torre extends Peca {
 
         return true;
     }
+
 }

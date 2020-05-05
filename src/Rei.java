@@ -25,4 +25,5 @@ public class Rei extends Peca{
         return true;
 
     }
+
 }
