@@ -16,8 +16,14 @@ public class Peca {
             if (matriz[linha_final][coluna_final].equipe==this.equipe) return false;
             //já retorna falso caso haja uma peça da mesma equipe na posição final
         }
-        if (linha_final==linha_inicial & coluna_final==coluna_inicial) return false;
-        return true;
+        if (linha_final==linha_inicial && coluna_final==coluna_inicial){
+            return false;
+        }
+        else{
+
+            return true;
+
+        }
     }
 
     public boolean verifica_captura(Peca[][] matriz, int[]vetor_pos){
@@ -34,16 +40,17 @@ public class Peca {
 
     public void movimento(int[] vetor_pos, Tabuleiro tab){
         if (verifica_movimento(tab.matriz, vetor_pos)){
+            System.out.println("Cheguei no if");
             if(verifica_captura(tab.matriz, vetor_pos)){
+                System.out.println("Cheguei no if");
                 tab.altera_posicao(vetor_pos);
             }
             else{
+                System.out.println("Cheguei no else");
                 tab.altera_posicao(vetor_pos);
             }
         }
-        else{
-            System.out.println("Movimento invalido");
-        }
+
         //verificar inicialmente a movimentação, se der true, verificar a captura, se der true é captura
         // se der false é apenas a movimentaçao
         //se a movimentação der false, nada deve ser feito
