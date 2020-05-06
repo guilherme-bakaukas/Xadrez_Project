@@ -32,9 +32,9 @@ public class Peca {
         return true;//caso haja uma peça ali, saberemos que é da equipe adversária, ois se não teria dado false no verifica_movimento
     }
 
-    public void movimento(Peca[][] matriz,int[] vetor_pos, Tabuleiro tab){
-        if (verifica_movimento(matriz, vetor_pos)){
-            if(verifica_captura(matriz, vetor_pos)){
+    public void movimento(int[] vetor_pos, Tabuleiro tab){
+        if (verifica_movimento(tab.matriz, vetor_pos)){
+            if(verifica_captura(tab.matriz, vetor_pos)){
                 tab.altera_posicao(vetor_pos);
             }
             else{
