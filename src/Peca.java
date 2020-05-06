@@ -32,7 +32,18 @@ public class Peca {
         return true;//caso haja uma peça ali, saberemos que é da equipe adversária, ois se não teria dado false no verifica_movimento
     }
 
-    public void movimento(Peca[][] matriz,int vetor_pos){
+    public void movimento(Peca[][] matriz,int[] vetor_pos, Tabuleiro tab){
+        if (verifica_movimento(matriz, vetor_pos)){
+            if(verifica_captura(matriz, vetor_pos)){
+                tab.altera_posicao(vetor_pos);
+            }
+            else{
+                tab.altera_posicao(vetor_pos);
+            }
+        }
+        else{
+            System.out.println("Movimento invalido");
+        }
         //verificar inicialmente a movimentação, se der true, verificar a captura, se der true é captura
         // se der false é apenas a movimentaçao
         //se a movimentação der false, nada deve ser feito
