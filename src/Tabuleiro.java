@@ -62,6 +62,7 @@ public class Tabuleiro {
         int linha_final = vetor[2];
         int coluna_final = vetor[3];
         switch (peca) {
+            case("B"):
             case ("b"):
                 if (linha_final == 7) {
                     matriz[linha_final][coluna_final] = new Bispo('P');
@@ -69,6 +70,7 @@ public class Tabuleiro {
                     matriz[linha_final][coluna_final] = new Bispo('B');
                 }
                 break;
+            case("Q"):
             case ("q"):
                 if (linha_final == 7) {
                     matriz[linha_final][coluna_final] = new Rainha('P');
@@ -76,6 +78,7 @@ public class Tabuleiro {
                     matriz[linha_final][coluna_final] = new Rainha('B');
                 }
                 break;
+            case("T"):
             case ("t"):
                 if (linha_final == 7) {
                     matriz[linha_final][coluna_final] = new Torre('P');
@@ -83,6 +86,7 @@ public class Tabuleiro {
                     matriz[linha_final][coluna_final] = new Torre('B');
                 }
                 break;
+            case("H"):
             case ("h"):
                 if (linha_final == 7) {
                     matriz[linha_final][coluna_final] = new Cavalo('P');
@@ -90,6 +94,7 @@ public class Tabuleiro {
                     matriz[linha_final][coluna_final] = new Cavalo('B');
                 }
                 break;
+            case("P"):
             case ("p"):
                 if (linha_final == 7) {
                     matriz[linha_final][coluna_final] = new Peao('P');
