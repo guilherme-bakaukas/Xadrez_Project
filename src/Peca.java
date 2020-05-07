@@ -40,13 +40,10 @@ public class Peca {
 
     public void movimento(int[] vetor_pos, Tabuleiro tab){
         if (verifica_movimento(tab.matriz, vetor_pos)){
-            System.out.println("Cheguei no if");
             if(verifica_captura(tab.matriz, vetor_pos)){
-                System.out.println("Cheguei no if");
                 tab.altera_posicao(vetor_pos);
             }
             else{
-                System.out.println("Cheguei no else");
                 tab.altera_posicao(vetor_pos);
             }
         }

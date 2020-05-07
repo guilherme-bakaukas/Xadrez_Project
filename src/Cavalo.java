@@ -15,7 +15,9 @@ public class Cavalo extends Peca {
         if (super.verifica_movimento(matriz,vetor_pos)==false) return false;
 
         int diferenca_linha=linha_final-linha_inicial;
-        int diferenca_coluna=coluna_final-coluna_final;
+        int diferenca_coluna=coluna_final-coluna_inicial;
+
+
 
         if (diferenca_coluna<0) diferenca_coluna=diferenca_coluna*(-1);
         if (diferenca_linha<0) diferenca_linha=diferenca_linha*(-1);
@@ -25,8 +27,12 @@ public class Cavalo extends Peca {
             else return false;
         }
         if (diferenca_linha==2){
-            if (diferenca_coluna==1) return true;
-            else return false;
+            if (diferenca_coluna==1){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         return false;
     }

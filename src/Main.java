@@ -13,7 +13,6 @@ public class Main {
             System.out.println("   Source: " + commands[i].movimento.charAt(0)+ commands[i].movimento.charAt(1));
                 System.out.println("   Target: " + commands[i].movimento.charAt(3)+ commands[i].movimento.charAt(4));
             int atual[] = tab.transformar_coordenadas(commands[i].movimento);
-            System.out.println("   Vez: " + vez);
             if(vez == tab.matriz[atual[0]][atual[1]].equipe & tab.matriz[atual[0]][atual[1]] != null ){
                 Peca patual = tab.matriz[atual[0]][atual[1]];
                 patual.movimento(atual, tab);

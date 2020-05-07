@@ -22,11 +22,13 @@ public class Peao extends Peca {
         switch (this.equipe){
             case('P'):
                 if (linha_final-linha_inicial!=1) return false;
+                break;
             case('B'):
                 if (linha_final-linha_inicial!=-1) return false;
         }
 
         if (coluna_final==coluna_inicial){
+
             if (matriz[linha_final][coluna_final]!=null) return false;
         }
         else{

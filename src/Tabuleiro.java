@@ -57,43 +57,44 @@ public class Tabuleiro {
         System.out.println("  a b c d e f g h ");
     }
 
+    // Chegar se precisa identificar maiusculas
     public void substituir(int[] vetor, String peca) {
         int linha_final = vetor[2];
         int coluna_final = vetor[3];
         switch (peca) {
-            case ("Bispo"):
+            case ("b"):
                 if (linha_final == 7) {
-                    matriz[linha_final][coluna_final] = new Bispo('B');
-                } else {
                     matriz[linha_final][coluna_final] = new Bispo('P');
+                } else {
+                    matriz[linha_final][coluna_final] = new Bispo('B');
                 }
                 break;
-            case ("Rainha"):
+            case ("q"):
                 if (linha_final == 7) {
-                    matriz[linha_final][coluna_final] = new Rainha('B');
-                } else {
                     matriz[linha_final][coluna_final] = new Rainha('P');
+                } else {
+                    matriz[linha_final][coluna_final] = new Rainha('B');
                 }
                 break;
-            case ("Torre"):
+            case ("t"):
                 if (linha_final == 7) {
-                    matriz[linha_final][coluna_final] = new Torre('B');
-                } else {
                     matriz[linha_final][coluna_final] = new Torre('P');
+                } else {
+                    matriz[linha_final][coluna_final] = new Torre('B');
                 }
                 break;
-            case ("Cavalo"):
+            case ("h"):
                 if (linha_final == 7) {
-                    matriz[linha_final][coluna_final] = new Cavalo('B');
-                } else {
                     matriz[linha_final][coluna_final] = new Cavalo('P');
+                } else {
+                    matriz[linha_final][coluna_final] = new Cavalo('B');
                 }
                 break;
-            case ("Peao"):
+            case ("p"):
                 if (linha_final == 7) {
-                    matriz[linha_final][coluna_final] = new Peao('B');
-                } else {
                     matriz[linha_final][coluna_final] = new Peao('P');
+                } else {
+                    matriz[linha_final][coluna_final] = new Peao('B');
                 }
                 break;
 
